@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Fira+Code:wght@300;400;500;600&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Fira Code", serif;
+}
+
+/* Global Styles */
+html, body {
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    /* background-color: #454545; */
+}
+
+/* Canvas */
+canvas#grid {
+    /* background-color: rgb(50, 50, 50); */
+    background-color: #C5D5EA;
+    border: 2px solid black;
+}
+
+canvas#overlay {
+    border: 2px solid black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+/* Main Container */
+.main {
+    display: flex;
+    justify-content: center;
+    min-height: min-content;
+    padding: 3rem;
+    padding-right: 5rem;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25) inset;
+    border-radius: 1rem;
+}
+
+/* Left Section */
+.main .left {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 3rem;
+   
+}
+
+.main .left .maze {
+    place-self: center;
+    position: relative;
+}
+
+.main .left input[type="range"] {
+    height: 15px; 
+    width: 50%;
+    color: #454545;
+}
+
+.main .left button {
+    width: 30%;
+}
+
+.main .right {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.main .right .maze-parameters,
+.main .right .solving-algorithms {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 1rem;
+    row-gap: 2rem;
+    width: 25vh;
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Apply cubic transition */
+}
+
+.solving-algorithms.hidden {
+    display: block !important;
+    position: absolute !important;
+    transform: translateX(800px);
+}
+
+.maze-parameters.hidden {
+    display: block !important;
+    position: absolute !important;
+    transform: translateX(-4900px);
+}
+
+.setting {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.btns {
+    display: flex; 
+    justify-content: center;
+}
+
+.btns > * {
+    padding: 3px 5px;
+}
+
+.btns #generate, .btns #solve {
+    width: 60% !important;
+}
+
+/* Back Arrow */
+.back-arrow {
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.back-arrow i {
+    transition: transform 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Apply cubic transition */
+}
+
+.back-arrow.rotate > i {
+    transform: rotate(180deg);
+}
+
+/* Solving Algorithms Section */
+.solving-algorithms input[name="alg"] {
+    all: unset;
+    height: 2rem;
+    width: 90%;
+    background-color: #D8E1E9;
+    
+}
+
+.solving-algorithms .setting:hover > input[name="alg"] {
+    background-color: #C5D5EA;
+}
+
+.solving-algorithms input[name="alg"]:checked {
+     
+    background-color: #7392B7;
+}
+
+.solving-algorithms .setting input[type="radio"] {
+    position: absolute;
+    z-index: -1;
+}
+
+.solving-algorithms .setting label {
+    height: 2rem;
+    width: 100%;
+    line-height: 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.solving-algorithms .setting {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+}
+
+.dispAlg {
+    margin-top: -1.5rem;
+    text-align: center;
+}

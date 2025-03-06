@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: "Fira Code", serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 0 5px 0 black;
+}
+
+footer {
+    width: 100%;
+    color: gray;
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.logo {
+    margin-left: 12rem;
+    width: 5rem;
+    height: 4rem;
+    background-image: url('../imgs/NikeLogoHeaderPng.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12rem;
+}
+
+.menu>* {
+    font-size: 18px;
+    font-weight: 800;
+    height: 100%;
+    width: 150px;
+    line-height: 4rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu>*:hover {
+    background-color: lightgray;
+}
+
+#main {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 90%;
+}
+
+#container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 500px;
+    height: 500px;
+    transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.slider.first {
+    transform: translateX(0px);
+}
+
+.slider.second {
+    transform: translateX(-500px);
+}
+
+.slider.third {
+    transform: translateX(-1000px);
+}
+
+.slider .element {
+    width: 500px;
+    height: 100%;
+}
+
+.element {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+.element.hidden {
+    display: none;
+}
+
+.element.svg {
+    background-image: url("../imgs/white-sneakers.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.element.bezier-canvas {
+    background-image: url("../imgs/white-tshirt.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.element.png {
+    background-image: url("../imgs/white-throusers.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.element.svg svg {
+    transform: scale(0.4) translate(241px, 10px);
+}
+
+.element.png img {
+    transform: scale(0.08) translate(440px, -1976px);
+}
+
+.color-pickers {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.color-picker {
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.color-picker::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+.color-picker-label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}

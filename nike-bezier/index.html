@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Project</title>
+    <link rel="shortcut icon" href="./imgs/NikeLogoSvg.svg" type="image/x-icon" sizes="any">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+        </div>
+        <div class="menu">
+            <div class="bezier" onclick="add('first')">Bezier</div>
+            <div class="svg" onclick="add('second')">Svg</div>
+            <div class="png" onclick="add('third')">Png</div>
+            
+        </div>
+    </header>
+    <div id="main">
+        <div style="display: flex; margin-top: 10rem;">
+            <div id="container">
+                <div class="slider">
+                    <div class="element bezier-canvas">
+                        <canvas height="500" width="500" id="cnv" onload="draw()">
+                        </canvas>
+                    </div>
+                    <div class="element svg">
+                        <svg width="500" height="500" viewBox="0 0 489 400">
+                            <path fill="black" stroke="black" stroke-width="1" d="M 97.25,143.75
+                            C 97.25,143.75 70.50,201.50 110.75,216.50
+                                126.00,226.50 164.75,212.75 164.75,212.75
+                                164.75,212.75 466.75,130.25 466.75,130.25
+                                466.75,130.25 232.67,232.00 233.33,232.67
+                                234.00,233.33 137.00,273.75 137.00,273.75
+                                137.00,273.75 65.27,302.73 48.36,254.18
+                                35.27,207.64 97.25,143.75 97.25,143.75 Z" />
+                        </svg>
+                    </div>
+                    <div class="element png">
+                        <img width="500" height="500" src="imgs/NikeLogoPng.png" alt="" style="object-fit: contain;">
+                    </div>
+                </div>
+            </div>
+            <div class="color-pickers">
+                <!-- <label for="overlayColor1" class="color-picker-label">Clothing:</label>
+                <input type="color" id="clothColorPicker" value="#ffffff" class="color-picker">
+                 -->
+                <label for="overlayColor2" class="color-picker-label">Logo:</label>
+                <input type="color" id="logoColorPicker" value="#000000" class="color-picker">
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; Made by Brin Blasco <br>
+        School project; Working with bezier curves, canvas. <br>
+        More info <a href="#" onclick="info()">Here</a>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>
