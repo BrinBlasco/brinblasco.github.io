@@ -1,0 +1,192 @@
+@import url('https://fonts.cdnfonts.com/css/trajan-pro');
+@font-face {
+    font-family: "cinzel";
+    font-weight: 400;
+    font-style: normal;
+    src: url("https://web.poecdn.com/font/Cinzel-Regular.woff") format("woff");
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    background-image: url("./assets/settlersofkalguur-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+h1 {
+    margin: 2rem 0;
+    color: rgb(34, 31, 31);
+    text-shadow:
+        0 0 3px #FFFFF0,
+        0 0 6px #FFFFE0,
+        0 0 10px #FFEEAA,
+        0 0 15px #FFD700;
+    font-family: 'Trajan Pro', sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+}
+button {
+    margin-top: 0.4rem;
+    background: url(../assets/button.png) no-repeat;
+    background-size: 100% 100%;
+    font-family: cinzel;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #181818;
+    cursor: pointer;
+    border: none;
+    padding: 1rem 6rem;
+    z-index: 100;
+}
+
+canvas {
+    position: relative;
+    background-color: #111;
+    box-shadow: 0 0 5px #FFEEAA;
+    background-image: url("./assets/canvas-background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cnvWrapper{
+    position: relative;
+}
+
+.cnvWrapper::before{
+    content: "";
+    width: 160px;
+    height: 46px;
+    background: url("./assets/top.png") no-repeat center top;
+    background-size: contain;
+    position: absolute;
+    top: -42px;
+    z-index: 99;
+    left: 50%;
+    margin-left: -80px;
+}
+.cnvWrapper::after {
+    content: "";
+    width: 285px;
+    height: 104px;
+    background: url("./assets/bottom.png") no-repeat center top;
+    background-size: contain;
+    position: absolute;
+    z-index: 99;
+    bottom: -95px;
+    left: 50%;
+    margin-left: -142px;
+}
+
+.horns-top::after,
+.horns-top::before {
+    content: "";
+    width: 68px;
+    height: 121px;
+    background: url("./assets/topleft.png") no-repeat center top;
+    background-size: contain;
+    position: absolute;
+    top: -27px;
+    z-index: 99;
+}
+.horns-top::before {
+    left: -20px;
+}
+.horns-top::after {
+    right: -20px;
+    transform: rotateY(180deg);
+}
+.horns-bottom::after,
+.horns-bottom::before {
+    content: "";
+    width: 50px;
+    height: 123px;
+    background: url("./assets/bottomleft.png") no-repeat center top;
+    background-size: contain;
+    position: absolute;
+    bottom: -72px;
+    z-index: 99;
+}
+
+.horns-bottom::before{
+    left: -20px;
+}
+
+.horns-bottom::after{
+    right: -20px;
+    transform: rotateY(180deg);
+}
+
+#menu {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    width: 100%;
+}
+
+#menu div {
+    margin-bottom: 10px;
+}
+
+button:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+
+button:active {
+    opacity: 0.9;
+    transform: scale(0.95);
+}
+
+.swal2-popup {
+    background-color: #333 !important;
+    color: #eee !important;
+    border-radius: 10px !important;
+    border: 1px solid #555;
+}
+
+.swal2-title {
+    color: #ffb703 !important;
+}
+
+.swal2-html-container {
+    color: #ccc !important;
+}
+
+.swal2-confirm {
+    background-color: #2a9d8f !important;
+}
+
+.swal2-styled:focus {
+    box-shadow: none !important;
+}
+
+.swal2-html-container a {
+    color: #90e0ef !important;
+    text-decoration: none;
+}
+
+.swal2-html-container a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Bricks - Currency Edition</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+</head>
+<body>
+
+  <h1>ExilE Bricks</h1> 
+  <div class="cnvWrapper">
+    <i class="horns-top"></i>
+    <i class="horns-bottom"></i>
+    <canvas id="myCanvas">
+    </canvas> 
+  </div>
+
+  <div id="menu">
+      <button id="playBtn">Play</button>
+      <button id="infoBtn">Info</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    const info = () => {
+        Swal.fire({
+            title: "Info",
+            html: `
+                <h4> Made by Brin Blasco </h1>
+                <br />
+                <style> /* Keep styles scoped if needed, or use global ones */
+                /* a { color: #90e0ef; } */ /* Now uses global sweetalert style */
+                </style>
+                <span>Github: <br> <a target="blank" href="https://github.com/BrinBlasco">github.com/BrinBlasco</a></span>
+                <br /><br />
+                <span>Hosted with: <br> <a target="blank" href="https://pages.github.com/">Github Pages</a></span>
+                <br /><br />
+
+                <p>
+                    This is a brick breaker game using Path of Exile currency icons for bricks and scoring. Break the currencies with the ball and paddle!
+                </p>
+                <p>
+                    Uses SweetAlert2 for popups and HTML5 Canvas. High score is saved in your browser's local storage.
+                </p>
+            `,
+        });
+    };
+  </script>
+  <script src="game.js"></script>
+
+</body>
+</html>
