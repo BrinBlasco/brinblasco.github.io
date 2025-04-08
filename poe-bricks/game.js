@@ -56,8 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var x = canvas.width / 2;
     var y = canvas.height - 30;
-    var dx = 2;
-    var dy = -3;
+    var dx = 5;
+    var dy = -5;
     var r = 10;
 
     var objects = []; 
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var sliderWidth = 100;
     var sliderHeight = 20;
     var sliderX = (canvas.width - sliderWidth) / 2;
-    var sliderSpeed = 7; 
+    var sliderSpeed = 10; 
     var rightPressed = false;
     var leftPressed = false;
 
@@ -314,8 +314,8 @@ document.addEventListener("DOMContentLoaded", function () {
         score = 0; 
         x = canvas.width / 2;
         y = canvas.height - 50; 
-        dx = (Math.random() < 0.5 ? 1 : -1) * 1.5;
-        dy = -1.5; 
+        dx = (Math.random() < 0.5 ? 1 : -1) * 5;
+        dy = -5; 
         objects = [];
         if (allImagesLoaded) { 
             setupObjects();

@@ -1,16 +1,4 @@
-@font-face {
-    font-family: 'Trajan Pro';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Trajan Pro'), url('https://fonts.cdnfonts.com/s/14928/TrajanPro-Regular.woff') format('woff');
-}
-@font-face {
-    font-family: 'Trajan Pro';
-    font-style: normal;
-    font-weight: 700;
-    src: local('Trajan Pro'), url('https://fonts.cdnfonts.com/s/14928/TrajanPro-Bold.woff') format('woff');
-}
-
+@import url('https://fonts.cdnfonts.com/css/trajan-pro');
 @font-face {
     font-family: "cinzel";
     font-weight: 400;
