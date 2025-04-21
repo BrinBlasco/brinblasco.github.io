@@ -1,53 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Path of Exile Bricks</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Path of Exile Bricks</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon" />
+    </head>
+    <body>
+        <h1>ExilE Bricks</h1>
 
-  <h1>ExilE Bricks</h1> 
-  <div class="cnvWrapper">
-    <i class="horns-top"></i>
-    <i class="horns-bottom"></i>
-    <canvas id="myCanvas">
-    </canvas> 
-  </div>
+        <div class="game-container" style="position: relative">
+            <div class="cnvWrapper">
+                <i class="horns-top"></i>
+                <i class="horns-bottom"></i>
+                <canvas id="myCanvas"> </canvas>
+            </div>
+            <div id="legend" style="position: absolute; right: -5rem">
+                <h4>Currency Values</h4>
+                <ul id="legend-list">
+                    <!-- Legend items will be dynamically added here by game.js -->
+                </ul>
+            </div>
+        </div>
+        <div id="menu">
+            <button id="playBtn">Play</button>
+            <button id="infoBtn">Info</button>
+        </div>
 
-  <div id="menu">
-      <button id="playBtn">Play</button>
-      <button id="infoBtn">Info</button>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script>
-    const info = () => {
-        Swal.fire({
-            title: "Info",
-            html: `
-                <h4> Made by Brin Blasco </h1>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            // Keep info function accessible globally or ensure it's called correctly
+            const info = () => {
+                Swal.fire({
+                    title: "Info",
+                    html: `
+                <h4> Made by Brin Blasco </h4>
                 <br />
-                <style> /* Keep styles scoped if needed, or use global ones */
-                /* a { color: #90e0ef; } */ /* Now uses global sweetalert style */
-                </style>
                 <span>Github: <br> <a target="blank" href="https://github.com/BrinBlasco">github.com/BrinBlasco</a></span>
                 <br /><br />
                 <span>Hosted with: <br> <a target="blank" href="https://pages.github.com/">Github Pages</a></span>
                 <br /><br />
-
                 <p>
-                    This is a brick breaker game using Path of Exile currency icons for bricks and scoring. Break the currencies with the ball and paddle!
+                    This is a brick breaker game using Path of Exile currency icons for bricks and scoring. Break the currencies with the ball and paddle! Move the paddle using Left/Right Arrow keys.
                 </p>
                 <p>
-                    Uses SweetAlert2 for popups and HTML5 Canvas. High score is saved in your browser's local storage.
+                    Uses SweetAlert2 for popups and HTML5 Canvas. High score is saved in your browser's local storage. Assets sourced from Path of Exile Wiki and game files.
                 </p>
             `,
-        });
-    };
-  </script>
-  <script src="game.js"></script>
-
-</body>
+                    // Custom class can also be used for specific styling if needed
+                });
+            };
+        </script>
+        <script src="game.js"></script>
+    </body>
 </html>
